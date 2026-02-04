@@ -104,10 +104,6 @@ It focuses on **network segmentation** for different departments to improve secu
 
 ---
 
-## 📄 License
-
-This project is open-source. Feel free to use and modify.
-
 
 ![Network Topology](VLAN_configuration.png)
 
