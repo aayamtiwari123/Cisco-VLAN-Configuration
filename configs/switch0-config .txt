@@ -1,0 +1,36 @@
+Switch> enable
+
+Switch# configure terminal
+
+Switch(config)# vlan 10
+Switch(config-vlan)# name ACCOUNT
+Switch(config-vlan)# exit
+
+Switch(config)# vlan 20
+Switch(config-vlan)# name ADMIN
+Switch(config-vlan)# exit
+
+Switch(config)# vlan 30
+Switch(config-vlan)# name EXAM
+Switch(config-vlan)# exit
+
+Switch(config)# interface fastEthernet0/24
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# exit
+
+Switch(config)# interface fastEthernet0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10
+Switch(config-if)# exit
+
+Switch(config)# interface range fastEthernet0/11
+Switch(config-if-range)# switchport mode access
+Switch(config-if-range)# switchport access vlan 20
+Switch(config-if-range)# exit
+
+Switch(config)# interface range fastEthernet0/19-22
+Switch(config-if-range)# switchport mode access
+Switch(config-if-range)# switchport access vlan 30
+Switch(config-if-range)# exit
+
+Switch(config)# end
