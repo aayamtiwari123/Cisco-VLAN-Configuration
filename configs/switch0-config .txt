@@ -28,7 +28,7 @@ Switch(config-if-range)# switchport mode access
 Switch(config-if-range)# switchport access vlan 20
 Switch(config-if-range)# exit
 
-Switch(config)# interface range fastEthernet0/19-22
+Switch(config)# interface range fastEthernet0/19
 Switch(config-if-range)# switchport mode access
 Switch(config-if-range)# switchport access vlan 30
 Switch(config-if-range)# exit
